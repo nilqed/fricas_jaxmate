@@ -13,7 +13,7 @@ Required:
 
 Get the repo:
 
-	git clone https://github.com/nilqed/jaxmate_pure.git
+	git clone https://github.com/nilqed/fricas_jaxmate.git
 
 
 Start:
