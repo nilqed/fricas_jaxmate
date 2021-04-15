@@ -1,0 +1,38 @@
+using reduce;
+using system;
+using math;
+using pptypes;
+
+
+// Definitions
+
+// The 'ptri.red' source file
+def ptrired = "lib/ptri.red" ;
+
+// Prefix to raw tex string returned by 'ptex'
+def pretex = "$\\def\\({\\left(} \\def\\){\\right)}" +
+              "\\def\\atan{\\operatorname{atan}}" +
+              "\\def\\erf{\\operatorname{erf}}" +
+              "\\def\\co{,}\\def\\[{}\\def\\]{}" +
+             "$";
+
+
+// Load ptri.red
+reduce::in ptrired ;
+
+// rawtex == simplify -> ptex -> string output
+// String returned by 'ptex' function in ptri.red
+rawtex x = filter (\s->s~="!") (simplify $ ptex x);
+
+// tex
+tex x = pretex + (rawtex x);
+
+// simpp
+simpp x = puts $ tex x;
+
+
+// if we use pptypes (__show__ texstr) then we do not need puts !!!!!!
+def redpp = tex;
+
+
+
