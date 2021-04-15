@@ -18,6 +18,11 @@ Get the repo:
 
 Start:
 
+    ./start.sh
+    Reload or press the Try-again button.
+
+or step by step:
+
 * `cd fricas_jaxmate`
 * `node fricas_server.js`
 * open http://localhost:3010, (e.g. `firefox localhost:3010`)
@@ -25,11 +30,11 @@ Start:
  :heavy_exclamation_mark: Tested with Firefox. 
 
 
-![jxmt_pure](docs/jxmt_pure.png)
+![jxmt_fricas1](docs/jxmt_fricas1.png)
 
 ## Customise
 
 :bell: [todo]
 
-![jxmt_pure2](docs/jxmt_pure2.png)
+![jxmt_fricas2](docs/jxmt_fricas2.png)
 
